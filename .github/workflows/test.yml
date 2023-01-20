@@ -58,7 +58,7 @@ jobs:
       - name: Run tests
         id: runTests
         run: |
-          sleep 200000
+          cp openssl/openss.cnf /etc/ssl/openssl.cnf
           poetry run coverage run -m pytest -xsvv tests
           poetry run coverage report
         env:
